@@ -1,0 +1,60 @@
+<!---<!doctype html>
+<html>
+    <head>
+        <title>flask app</title>
+    </head>
+    <body>
+        <h1>Diabetes Prediction System</h1>
+        <form action="/predict" method="POST">
+            <label>Pregnancies:</label>
+            <input type="number" name="pregnancies" required><br>
+
+            <label>Glucose</label>
+            <input type="number" name="glucose" required><br>
+
+            <label>bloodpressure</label>
+            <input type="number" name="bloodpressure" required><br>
+
+            <label>BMI:</label>
+            <input type="number" name="bmi"  step ="0.1" required><br>
+
+            <label>age</label>
+            <input type="number" name="age" required><br>
+
+            <input type="submit" value="predict">
+        </form>
+        <h2>{{ result }}</h2>
+    </body>
+</html>--->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Prediction</h1>
+        <form action="/predict" method="POST">
+            <label>Pregnancies:</label>
+            <input type="number" name="pregnancies" required>
+
+            <label>Glucose:</label>
+            <input type="number" name="glucose" required>
+
+            <label>Blood Pressure:</label>
+            <input type="number" name="bloodpressure" required>
+
+            <label>BMI:</label>
+            <input type="number" name="bmi" step="0.1" required>
+
+            <label>Age:</label>
+            <input type="number" name="age" required>
+
+            <button type="submit">Predict</button>
+        </form>
+        <div class="result">{{ result }}</div>
+    </div>
+</body>
+</html>
